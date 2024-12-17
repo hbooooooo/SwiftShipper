@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Shipping</title>
+    <style>
+        .container {
+            width: 95%;
+            max-width: 1560px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .form-section {
+            flex: 1;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background: #fff;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .packages {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #0073e6;
+            color: white;
+        }
+        .packages th:nth-child(3), .packages td:nth-child(3) {
+            width: 20%;
+        }
+        .packages th:nth-child(4), .packages td:nth-child(4) {
+            width: 30%;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.jpeg" alt="Swiftshipper Logo">
+        <h2>Ship an Item</h2>
+        <form action="shipping-options.html">
+            <div class="form-container">
+                <!-- Ship From Section -->
+                <div class="form-section">
+                    <h3>Ship from</h3>
+                    <label>Name</label>
+                    <input type="text" placeholder="Name">
+
+                    <label>Phone Country Code</label>
+                    <select>
+                        <option>[IT] Italy +39</option>
+                        <option>[US] United States +1</option>
+                    </select>
+                    <label>Area Code</label>
+                    <input type="text" placeholder="Area Code">
+
+                    <label>Number</label>
+                    <input type="text" placeholder="Number">
+
+                    <label>Address Country</label>
+                    <input type="text" placeholder="IT">
+
+                    <label>State/Province</label>
+                    <input type="text" placeholder="MI">
+
+                    <label>City</label>
+                    <input type="text" placeholder="Milano">
+
+                    <label>Postal Code</label>
+                    <input type="text" placeholder="20121">
+
+                    <label>Address Lines</label>
+                    <textarea placeholder="Via Tazzoli 2"></textarea>
+                </div>
+
+                <!-- Ship To Section -->
+                <div class="form-section">
+                    <h3>Ship To</h3>
+                    <label>Name</label>
+                    <input type="text" placeholder="Name">
+
+                    <label>Phone Country Code</label>
+                    <select>
+                        <option>[US] United States +1</option>
+                        <option>[IT] Italy +39</option>
+                    </select>
+                    <label>Area Code</label>
+                    <input type="text" placeholder="Area Code">
+
+                    <label>Number</label>
+                    <input type="text" placeholder="Number">
+
+                    <label>Address Country</label>
+                    <input type="text" placeholder="US">
+
+                    <label>State/Province</label>
+                    <input type="text" placeholder="NY">
+
+                    <label>City</label>
+                    <input type="text" placeholder="New York">
+
+                    <label>Postal Code</label>
+                    <input type="text" placeholder="10018">
+
+                    <label>Address Lines</label>
+                    <textarea placeholder="343 West 36th Street"></textarea>
+                </div>
+            </div>
+
+            <!-- Packages Section -->
+            <div class="packages">
+                <h3>Packages</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Packaging</th>
+                            <th>Weight (KG)</th>
+                            <th>Description</th>
+                            <th>Dimension L x W x H (CM)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select>
+                                    <option>Box</option>
+                                    <option>Envelope</option>
+                                </select>
+                            </td>
+                            <td><input type="number" placeholder="10.000"></td>
+                            <td><input type="text" placeholder="Just another package"></td>
+                            <td>
+                                <input type="number" placeholder="10"> x
+                                <input type="number" placeholder="10"> x
+                                <input type="number" placeholder="10">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="button-container">
+                <a href="dashboard.html"><button type="button">Back</button></a>
+                <input type="submit" value="Next">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

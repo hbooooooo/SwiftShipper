@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Options</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+            white-space: nowrap;
+        }
+        th {
+            background-color: #0073e6;
+            color: white;
+            font-weight: bold;
+        }
+        .status-bar {
+            display: inline-block;
+            height: 10px;
+            width: 80px;
+            background: linear-gradient(to right, red 50%, lightgray 50%);
+            border-radius: 5px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #0073e6;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        input[type="radio"] {
+            transform: scale(1.3);
+            margin-right: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            table {
+                overflow-x: auto;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Shipping Options</h2>
+        <form action="confirmation.html" method="post">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Carrier</th>
+                        <th>Service</th>
+                        <th>Tracking Number</th>
+                        <th>Expected Delivery Date & On-Time Rate</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="radio" name="shippingOption" value="option1" required></td>
+                        <td><img src="ups-logo.svg" alt="UPS" width="50"></td>
+                        <td>Express Plus</td>
+                        <td>TRK123456789</td>
+                        <td>2024-12-18 (1 day) <div class="status-bar"></div></td>
+                        <td>808.77 EUR</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="shippingOption" value="option2" required></td>
+                        <td><img src="fedex-logo.svg" alt="FedEx" width="50"></td>
+                        <td>International Economy</td>
+                        <td>TRK987654321</td>
+                        <td>2024-12-24 (6 days) <div class="status-bar"></div></td>
+                        <td>116.87 EUR</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="shippingOption" value="option3" required></td>
+                        <td><img src="dummy-logo.svg" alt="Dummy" width="50"></td>
+                        <td>Service1</td>
+                        <td>TRK567890123</td>
+                        <td>2024-12-20 (2 days) <div class="status-bar"></div></td>
+                        <td>7.15 EUR</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="shippingOption" value="option4" required></td>
+                        <td><img src="ups-logo.svg" alt="UPS" width="50"></td>
+                        <td>Expedited</td>
+                        <td>TRK234567890</td>
+                        <td>2024-12-24 (6 days) <div class="status-bar"></div></td>
+                        <td>646.48 EUR</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttons">
+                <a href="dashboard.html"><button type="button">Back</button></a>
+                <button type="submit">Confirm Selection</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

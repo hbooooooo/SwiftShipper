@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            text-align: center;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            white-space: nowrap;
+        }
+        th {
+            background-color: #0073e6;
+            color: white;
+        }
+        .status-bar {
+            display: inline-block;
+            height: 10px;
+            width: 80px;
+            background: linear-gradient(to right, red 50%, lightgray 50%);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.jpeg" alt="Swiftshipper Logo">
+        <h2>Dashboard</h2>
+        <div class="button-container">
+            <a href="shipping.html"><button>Ship a New Item</button></a>
+            <a href="support.html"><button>Support</button></a>
+            <a href="admin.html"><button>Admin</button></a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Carrier</th>
+                    <th>Service</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Tracking Number</th>
+                    <th>Expected Delivery Date</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>UPS</td>
+                    <td>Express Plus</td>
+                    <td>Paris</td>
+                    <td>New York</td>
+                    <td>TRK123456789</td>
+                    <td>2024-12-18 (1 day) <div class="status-bar"></div></td>
+                    <td>808.77 EUR</td>
+                </tr>
+                <tr>
+                    <td>FEDEX</td>
+                    <td>International Economy</td>
+                    <td>Berlin</td>
+                    <td>Tokyo</td>
+                    <td>TRK987654321</td>
+                    <td>2024-12-24 (6 days) <div class="status-bar"></div></td>
+                    <td>116.87 EUR</td>
+                </tr>
+                <tr>
+                    <td>DUMMY</td>
+                    <td>Service1</td>
+                    <td>Madrid</td>
+                    <td>London</td>
+                    <td>TRK567890123</td>
+                    <td>2024-12-20 (2 days) <div class="status-bar"></div></td>
+                    <td>7.15 EUR</td>
+                </tr>
+                <tr>
+                    <td>UPS</td>
+                    <td>Expedited</td>
+                    <td>Los Angeles</td>
+                    <td>Chicago</td>
+                    <td>TRK234567890</td>
+                    <td>2024-12-19 (today) <div class="status-bar"></div></td>
+                    <td>512.55 EUR</td>
+                </tr>
+                <tr>
+                    <td>FEDEX</td>
+                    <td>Overnight</td>
+                    <td>London</td>
+                    <td>Paris</td>
+                    <td>TRK345678901</td>
+                    <td>Delivered</td>
+                    <td>212.40 EUR</td>
+                </tr>
+                <tr>
+                    <td>DUMMY</td>
+                    <td>Service2</td>
+                    <td>Barcelona</td>
+                    <td>Berlin</td>
+                    <td>TRK456789012</td>
+                    <td>Delivered</td>
+                    <td>15.99 EUR</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
